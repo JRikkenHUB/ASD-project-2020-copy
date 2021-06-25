@@ -1,0 +1,37 @@
+image: maven:3.6.3-openjdk-14
+
+clone:
+  depth: full
+
+
+
+definitions:
+  caches:
+    sonar: ~/.sonar/cache
+    maven: ~/.m2/repository
+  steps:
+    - step: &sonar
+        name: scan on SonarCloud
+        caches:
+          - sonar
+          - maven
+        script:
+          - docker pull darthfedor/tunnel-server:latest
+          - docker network create mynet
+          - mvn verify org.jacoco:jacoco-maven-plugin:report org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+        artifacts:
+          - target/**
+        services:
+          - docker
+
+pipelines:
+  branches:
+    master:
+      - step: *sonar
+    develop:
+      - step: *sonar
+    component/*:
+      - step: *sonar
+  pull-requests:
+    '**':
+      - step: *sonar

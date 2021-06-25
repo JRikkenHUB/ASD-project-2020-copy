@@ -1,0 +1,114 @@
+{
+  "behaviors": [
+    {
+      "behaviorName": "default",
+      "body": [
+        {
+          "type": "action",
+          "action": "move up"
+        },
+        {
+          "type": "decision",
+          "condition": {
+            "type": "dualExpression",
+            "expressionType": "state",
+            "lhs": {
+              "type": "unit",
+              "unit": "unit"
+            },
+            "rhs": {
+              "type": "state",
+              "state": "near"
+            }
+          },
+          "ifTrue": [
+            {
+              "type": "decision",
+              "condition": {
+                "type": "dualExpression",
+                "expressionType": "eq",
+                "lhs": {
+                  "type": "unit",
+                  "unit": "my",
+                  "attribute": "health"
+                },
+                "rhs": {
+                  "type": "unit",
+                  "unit": "unit",
+                  "attribute": "health"
+                }
+              },
+              "ifTrue": [
+                {
+                  "type": "action",
+                  "action": "attack",
+                  "parameter": "unit"
+                }
+              ]
+            }
+          ],
+          "ifFalse": [
+            {
+              "type": "action",
+              "action": "move up"
+            }
+          ]
+        },
+        {
+          "type": "behaviorCall",
+          "behaviorCall": "test"
+        }
+      ]
+    },
+    {
+      "behaviorName": "test",
+      "body": [
+        {
+          "type": "decision",
+          "condition": {
+            "type": "dualExpression",
+            "expressionType": "and",
+            "lhs": {
+              "type": "dualExpression",
+              "expressionType": "gt",
+              "lhs": {
+                "type": "unit",
+                "unit": "my",
+                "attribute": "health"
+              },
+              "rhs": {
+                "type": "percentage",
+                "percentage": "20%"
+              }
+            },
+            "rhs": {
+              "type": "dualExpression",
+              "expressionType": "lt",
+              "lhs": {
+                "type": "unit",
+                "unit": "my",
+                "attribute": "strength"
+              },
+              "rhs": {
+                "type": "scalar",
+                "scalar": "20"
+              }
+            }
+          },
+          "ifTrue": [
+            {
+              "type": "action",
+              "action": "move up"
+            }
+          ],
+          "ifFalse": [
+            {
+              "type": "behaviorCall",
+              "behaviorCall": "default"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "attack": {
+    "parameters": [
+      "enemy",
+      "monster"
+    ],
+    "alias": [
+      "hit",
+      "fight"
+    ]
+  },
+  "grab": {
+    "parameters": [
+      "artifact",
+      "flag",
+      "weapon",
+      "armor"
+    ],
+    "alias": [
+      "pickup"
+    ]
+  },
+  "move towards": {
+    "parameters": [
+      "unit",
+      "enemy",
+      "monster",
+      "teammate",
+      "artifact",
+      "flag",
+      "weapon",
+      "armor"
+    ],
+    "alias": []
+  },
+  "move away from": {
+    "parameters": [
+      "unit",
+      "enemy",
+      "monster",
+      "teammate",
+      "artifact",
+      "flag",
+      "weapon",
+      "armor"
+    ],
+    "alias": [
+      "run from"
+    ]
+  },
+  "move randomly": {
+    "parameters": [],
+    "alias": []
+  },
+  "move up": {
+    "parameters": [],
+    "alias": []
+  },
+  "move right": {
+    "parameters": [],
+    "alias": []
+  },
+  "move down": {
+    "parameters": [],
+    "alias": []
+  },
+  "move left": {
+    "parameters": [],
+    "alias": []
+  }
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>asdungeon</artifactId>
+        <groupId>nl.ritogames</groupId>
+        <version>0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>assembly</artifactId>
+    <packaging>jar</packaging>
+    <name>assembly</name>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>5.0.0-BETA-1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.stefanbirkner</groupId>
+            <artifactId>system-rules</artifactId>
+            <version>1.19.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.blindpirate</groupId>
+            <artifactId>junit5-capture-system-output-extension</artifactId>
+            <version>0.1.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>shared</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>agentcompiler</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>chat</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>filehandler</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>gamestate</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>generator</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>intelligentagent</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>networkhandler</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>parser</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>ruleengine</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>trui</artifactId>
+            <version>0.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>nl.ritogames.ASDungeon</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <finalName>asdungeon</finalName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

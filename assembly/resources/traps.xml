@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<traps>
+    <trap name="thornbush">
+        <visible>true</visible>
+        <damage>20</damage>
+        <spawnrate>20</spawnrate>
+        <texture>X</texture>
+    </trap>
+    <trap name="pit">
+        <visible>false</visible>
+        <damage>15</damage>
+        <spawnrate>15</spawnrate>
+        <texture>T</texture>
+    </trap>
+</traps>

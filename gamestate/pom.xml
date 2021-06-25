@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>asdungeon</artifactId>
+        <groupId>nl.ritogames</groupId>
+        <version>0.1</version>
+    </parent>
+
+    <artifactId>gamestate</artifactId>
+    <packaging>jar</packaging>
+    <name>gamestate</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>shared</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>4.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>generator</artifactId>
+            <version>0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.6.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>nl.ritogames</groupId>
+            <artifactId>filehandler</artifactId>
+            <version>0.1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<entities>
+    <armourtypes>
+        <attribute name="wooden shield">
+            <type>armour</type>
+            <defense>3</defense>
+            <spawnrate>10</spawnrate>
+        </attribute>
+        <attribute name="leather chestplate">
+            <type>armour</type>
+            <defense>6</defense>
+            <spawnrate>8</spawnrate>
+        </attribute>
+        <attribute name="iron helmet">
+            <type>armour</type>
+            <defense>10</defense>
+            <spawnrate>6</spawnrate>
+        </attribute>
+        <attribute name="iron shield">
+            <type>armour</type>
+            <defense>12</defense>
+            <spawnrate>3</spawnrate>
+        </attribute>
+        <attribute name="iron chestplate">
+            <type>armour</type>
+            <defense>20</defense>
+            <spawnrate>1</spawnrate>
+        </attribute>
+        <attribute name="diamond helmet">
+            <type>armour</type>
+            <defense>16</defense>
+            <spawnrate>0.12</spawnrate>
+        </attribute>
+        <attribute name="diamond chestplate">
+            <type>armour</type>
+            <defense>20</defense>
+            <spawnrate>0.03</spawnrate>
+        </attribute>
+    </armourtypes>
+    <weapontypes>
+        <attribute name="wooden club">
+            <type>weapon</type>
+            <damage>2</damage>
+            <spawnrate>10</spawnrate>
+        </attribute>
+        <attribute name="spiked club">
+            <type>weapon</type>
+            <damage>8</damage>
+            <spawnrate>3</spawnrate>
+        </attribute>
+        <attribute name="sword">
+            <type>weapon</type>
+            <damage>15</damage>
+            <spawnrate>0.1</spawnrate>
+        </attribute>
+        <attribute name="a gun">
+            <type>weapon</type>
+            <damage>100</damage>
+            <spawnrate>0.001</spawnrate>
+        </attribute>
+    </weapontypes>
+    <potiontypes>
+        <attribute name="health potion">
+            <type>potion</type>
+            <characterField>healthBuff</characterField>
+            <effect>40</effect>
+            <spawnrate>0.1</spawnrate>
+        </attribute>
+        <attribute name="bread">
+            <type>potion</type>
+            <characterField>healthBuff</characterField>
+            <effect>10</effect>
+            <spawnrate>1</spawnrate>
+        </attribute>
+        <attribute name="weird leave">
+            <type>potion</type>
+            <characterField>healthBuff</characterField>
+            <effect>2</effect>
+            <spawnrate>1</spawnrate>
+        </attribute>
+    </potiontypes>
+    <mobTypes>
+        <mob name="Troll">
+            <damage>25</damage>
+            <max_health>100</max_health>
+            <defense>25</defense>
+            <spawnrate>0.1</spawnrate>
+            <texture>T</texture>
+        </mob>
+        <mob name="Giant spider">
+            <damage>15</damage>
+            <max_health>50</max_health>
+            <defense>25</defense>
+            <spawnrate>1</spawnrate>
+            <texture>S</texture>
+        </mob>
+        <mob name="Orc">
+            <damage>15</damage>
+            <max_health>15</max_health>
+            <defense>30</defense>
+            <spawnrate>1</spawnrate>
+            <texture>O</texture>
+        </mob>
+        <mob name="Warg">
+            <damage>30</damage>
+            <max_health>60</max_health>
+            <defense>5</defense>
+            <spawnrate>1</spawnrate>
+            <texture>O</texture>
+        </mob>
+        <mob name="Wild boar">
+            <damage>20</damage>
+            <max_health>20</max_health>
+            <defense>20</defense>
+            <spawnrate>1</spawnrate>
+            <texture>O</texture>
+        </mob>
+    </mobTypes>
+</entities>
